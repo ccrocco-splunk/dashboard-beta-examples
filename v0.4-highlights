@@ -1,0 +1,708 @@
+{
+	"visualizations": {
+		"viz_955mpLEq": {
+			"dataSources": {
+				"primary": "areasearch"
+			},
+			"description": "Using tokens from time range and multiselect",
+			"options": {
+				"chart.nullValueMode": "zero"
+			},
+			"title": "Enhanced Line Visualization",
+			"type": "viz.line"
+		},
+		"viz_FkWnRfhw": {
+			"dataSources": {
+				"primary": "ds_NwSmOWvi_singlevaluemajorcolor"
+			},
+			"description": "",
+			"encoding": {
+				"majorColor": {
+					"field": "primary[0]",
+					"format": {
+						"ranges": [
+							{
+								"from": 100,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 70,
+								"to": 100,
+								"value": "#ff7152"
+							},
+							{
+								"from": 50,
+								"to": 70,
+								"value": "#fc9850"
+							},
+							{
+								"from": 30,
+								"to": 50,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 10,
+								"to": 30,
+								"value": "#4beba8"
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						],
+						"type": "rangevalue"
+					}
+				}
+			},
+			"options": {
+				"backgroundColor": "transparent",
+				"showSparkline": false
+			},
+			"title": "",
+			"type": "viz.singlevalue"
+		},
+		"viz_Hj18tRnc": {
+			"dataSources": {
+				"primary": "post4"
+			},
+			"options": {
+				"backgroundColor": "#23242B",
+				"orientation": "horizontal"
+			},
+			"title": "Filler Gauge - Horizontal",
+			"type": "viz.fillergauge",
+			"description": "Uses a base search & thresholding UI",
+			"encoding": {
+				"gaugeColor": {
+					"field": "encoding.value",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 7000,
+								"value": "#dc4e41",
+								"to": 10000
+							},
+							{
+								"from": 3000,
+								"value": "#f1813f",
+								"to": 7000
+							},
+							{
+								"from": 30,
+								"to": 3000,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 0,
+								"value": "#53a051",
+								"to": 30
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_JTQ7ibZp": {
+			"dataSources": {
+				"primary": "punchcardsearch"
+			},
+			"description": "Using tokens from time range and multiselect",
+			"encoding": {
+				"category": "primary.sourcetype",
+				"size": "primary.count",
+				"x": "primary.hour",
+				"y": "primary.day"
+			},
+			"options": {
+				"backgroundColor": "#23242B",
+				"colorMode": "categorical",
+				"seriesColors": [
+					"#AAF5E6",
+					"#C6335F",
+					"#422879",
+					"#FDAF93",
+					"#A870EF",
+					"#F29AAC"
+				]
+			},
+			"title": "New Punchcard Visualization",
+			"type": "viz.punchcard"
+		},
+		"viz_LALgFr21": {
+			"dataSources": {
+				"primary": "piesearch"
+			},
+			"description": "Utilizing hasDonutHole prop and a single value in the available blank space.",
+			"options": {
+				"backgroundColor": "#23242B",
+				"hasDonutHole": true,
+				"seriesColors": "[#88358f, #c6335f, #f6847c, #fcd9a3]"
+			},
+			"title": "Pie Chart --> Donut Chart",
+			"type": "viz.pie"
+		},
+		"viz_Oj4Lhhiy": {
+			"dataSources": {
+				"primary": "post1"
+			},
+			"options": {
+				"backgroundColor": "#23242B",
+				"orientation": "vertical",
+				"ranges": [
+					{
+						"from": 7000,
+						"value": "#CB3B43",
+						"to": 10000
+					},
+					{
+						"from": 3000,
+						"value": "#f8be34",
+						"to": 7000
+					},
+					{
+						"from": 0,
+						"value": "#4fa484",
+						"to": 3000
+					}
+				]
+			},
+			"title": "Marker Gauge - Vertical",
+			"type": "viz.markergauge",
+			"description": "Uses a base search & thresholding UI"
+		},
+		"viz_WvnTyJZG": {
+			"dataSources": {
+				"primary": "post2"
+			},
+			"options": {
+				"backgroundColor": "#23242B",
+				"orientation": "vertical"
+			},
+			"title": "Filler Gauge - Vertical",
+			"type": "viz.fillergauge",
+			"description": "Uses a base search & thresholding UI",
+			"encoding": {
+				"gaugeColor": {
+					"field": "encoding.value",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 5000,
+								"value": "#dc4e41",
+								"to": 10000
+							},
+							{
+								"from": 3000,
+								"value": "#f8be34",
+								"to": 5000
+							},
+							{
+								"from": 30,
+								"value": "#4fa484",
+								"to": 3000
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_kFUhV1pp": {
+			"dataSources": {
+				"primary": "post3"
+			},
+			"options": {
+				"backgroundColor": "#23242B",
+				"orientation": "horizontal",
+				"ranges": [
+					{
+						"from": 7000,
+						"value": "#dc4e41",
+						"to": 10000
+					},
+					{
+						"from": 3000,
+						"value": "#f8be34",
+						"to": 7000
+					},
+					{
+						"from": 0,
+						"value": "#4fa484",
+						"to": 3000
+					}
+				]
+			},
+			"title": "Marker Gauge - Horizontal",
+			"type": "viz.markergauge",
+			"description": "Uses a base search & thresholding UI"
+		},
+		"viz_w4JIR8YR": {
+			"dataSources": {
+				"primary": "singlevaluemajorcolor"
+			},
+			"description": "Threshold applied to primary value, with sparkline",
+			"encoding": {
+				"majorColor": {
+					"field": "primary[0]",
+					"format": {
+						"ranges": [
+							{
+								"from": 100,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 70,
+								"to": 100,
+								"value": "#ff7152"
+							},
+							{
+								"from": 50,
+								"to": 70,
+								"value": "#fc9850"
+							},
+							{
+								"from": 30,
+								"to": 50,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 10,
+								"to": 30,
+								"value": "#4beba8"
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						],
+						"type": "rangevalue"
+					}
+				},
+				"fill": {
+					"field": "encoding.trend",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 100,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 70,
+								"to": 100,
+								"value": "#ff7152"
+							},
+							{
+								"from": 50,
+								"to": 70,
+								"value": "#fc9850"
+							},
+							{
+								"from": 30,
+								"to": 50,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 10,
+								"value": "#53a051",
+								"to": 30
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			},
+			"options": {
+				"backgroundColor": "#23242B"
+			},
+			"title": "Single Value w Threshold",
+			"type": "viz.singlevalue"
+		}
+	},
+	"dataSources": {
+		"base": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=_internal sourcetype=splunkd_access | stats count",
+				"queryParameters": {
+					"earliest": "-1d",
+					"latest": "now"
+				}
+			},
+			"name": "base"
+		},
+		"post1": {
+			"type": "ds.chain",
+			"options": {
+				"query": " eval count=count*1.2",
+				"extend": "base"
+			},
+			"name": "post1"
+		},
+		"post2": {
+			"type": "ds.chain",
+			"options": {
+				"query": " eval count=count/1.2",
+				"extend": "base"
+			},
+			"name": "post2"
+		},
+		"post3": {
+			"type": "ds.chain",
+			"options": {
+				"query": " eval count=count+100",
+				"extend": "base"
+			},
+			"name": "post3"
+		},
+		"post4": {
+			"type": "ds.chain",
+			"options": {
+				"query": " eval count=count-100",
+				"extend": "base"
+			},
+			"name": "post4"
+		},
+		"areasearch": {
+			"name": "Area Chart Search",
+			"options": {
+				"query": "index=_internal| timechart count by sourcetype",
+				"queryParameters": {
+					"earliest": "$tr.earliest$",
+					"latest": "$tr.latest$"
+				}
+			},
+			"type": "ds.search"
+		},
+		"ds_3olLXsEj": {
+			"name": "Search_1",
+			"options": {
+				"query": "index=_internal | stats count",
+				"queryParameters": {
+					"earliest": "-15d@d",
+					"latest": "now"
+				}
+			},
+			"type": "ds.search"
+		},
+		"ds_NwSmOWvi_singlevaluemajorcolor": {
+			"name": "Copy of Single Value - Major Color DS Test",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"92",
+							"80",
+							"80",
+							"4",
+							"4",
+							"20",
+							"100",
+							"95",
+							"20"
+						],
+						[
+							"100",
+							"100",
+							"90",
+							"30",
+							"25",
+							"5",
+							"15",
+							"95",
+							"78"
+						]
+					],
+					"fields": [
+						{
+							"name": "foo"
+						},
+						{
+							"name": "bar"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		},
+		"inputsearch": {
+			"name": "Search backing Multiselect Input",
+			"options": {
+				"query": "index=_internal | stats count by sourcetype",
+				"queryParameters": {
+					"earliest": "-1d",
+					"latest": ""
+				}
+			},
+			"type": "ds.search"
+		},
+		"piesearch": {
+			"name": "Pie Chart DS Test",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"Alpha",
+							"Beta",
+							"Gamma",
+							"Delta"
+						],
+						[
+							"17",
+							"163",
+							"79",
+							"41"
+						]
+					],
+					"fields": [
+						{
+							"name": "sourcetype"
+						},
+						{
+							"name": "percent",
+							"type_special": "percent"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		},
+		"punchcardsearch": {
+			"name": "Punchcard Chart Search",
+			"options": {
+				"query": "index=_internal sourcetype!=splunkd AND sourcetype!=splunkd_ui_access| eval day=strftime(_time, \"%A\"), hour=strftime(_time, \"%I%p\")\n| stats count(sourcetype) as count by sourcetype, hour, day",
+				"queryParameters": {
+					"earliest": "$tr.earliest$",
+					"latest": "$tr.latest$"
+				}
+			},
+			"type": "ds.search"
+		},
+		"singlevaluemajorcolor": {
+			"name": "Single Value - Major Color DS Test",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"92",
+							"80",
+							"80",
+							"4",
+							"4",
+							"20",
+							"100",
+							"95",
+							"20"
+						],
+						[
+							"100",
+							"100",
+							"90",
+							"30",
+							"25",
+							"5",
+							"15",
+							"95",
+							"78"
+						]
+					],
+					"fields": [
+						{
+							"name": "foo"
+						},
+						{
+							"name": "bar"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		},
+		"svinpiesearch": {
+			"name": "SV in Pie DS Test",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"10",
+							"20",
+							"30",
+							"43",
+							"34",
+							"60",
+							"70",
+							"85",
+							"90"
+						],
+						[
+							"1",
+							"2",
+							"3",
+							"4",
+							"5",
+							"6",
+							"7",
+							"8"
+						]
+					],
+					"fields": [
+						{
+							"name": "foo"
+						},
+						{
+							"name": "bar"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		}
+	},
+	"inputs": {
+		"input0": {
+			"options": {
+				"defaultValue": "-7d,now",
+				"token": "tr"
+			},
+			"title": "Select Time Range",
+			"type": "input.timerange"
+		},
+		"input1": {
+			"dataSources": {
+				"primary": "inputsearch"
+			},
+			"encoding": {
+				"label": "primary[0]",
+				"value": "primary[0]"
+			},
+			"options": {
+				"defaultValue": "*",
+				"items": [
+					{
+						"label": "All",
+						"value": "*"
+					}
+				],
+				"token": "ms"
+			},
+			"title": "Select Sourcetype(s)",
+			"type": "input.multiselect"
+		}
+	},
+	"layout": {
+		"globalInputs": [
+			"input0",
+			"input1"
+		],
+		"options": {
+			"display": "auto-scale",
+			"height": 1000,
+			"showTitleAndDescription": true,
+			"submitButton": true,
+			"width": 2180
+		},
+		"structure": [
+			{
+				"item": "viz_WvnTyJZG",
+				"position": {
+					"h": 470,
+					"w": 225,
+					"x": 1690,
+					"y": 30
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_Oj4Lhhiy",
+				"position": {
+					"h": 470,
+					"w": 225,
+					"x": 1930,
+					"y": 30
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_955mpLEq",
+				"position": {
+					"h": 470,
+					"w": 1160,
+					"x": 20,
+					"y": 30
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_w4JIR8YR",
+				"position": {
+					"h": 470,
+					"w": 470,
+					"x": 1200,
+					"y": 510
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_LALgFr21",
+				"position": {
+					"h": 470,
+					"w": 470,
+					"x": 1200,
+					"y": 30
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_FkWnRfhw",
+				"position": {
+					"h": 160,
+					"w": 170,
+					"x": 1320,
+					"y": 210
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_Hj18tRnc",
+				"position": {
+					"h": 230,
+					"w": 470,
+					"x": 1690,
+					"y": 510
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_kFUhV1pp",
+				"position": {
+					"h": 230,
+					"w": 470,
+					"x": 1690,
+					"y": 750
+				},
+				"type": "block"
+			},
+			{
+				"item": "viz_JTQ7ibZp",
+				"position": {
+					"h": 470,
+					"w": 1160,
+					"x": 20,
+					"y": 510
+				},
+				"type": "block"
+			}
+		],
+		"type": "absolute"
+	},
+	"title": "Dashboard Beta App v0.4 Highlights",
+	"description": "This dashboard requires access to the local _internal index. Some searches will not find results otherwise."
+}
