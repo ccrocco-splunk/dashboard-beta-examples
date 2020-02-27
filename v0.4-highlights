@@ -370,7 +370,7 @@
 		"areasearch": {
 			"name": "Area Chart Search",
 			"options": {
-				"query": "index=_internal| timechart count by sourcetype",
+				"query": "index=_internal sourcetype !=splunkd | timechart count by sourcetype",
 				"queryParameters": {
 					"earliest": "$tr.earliest$",
 					"latest": "$tr.latest$"
