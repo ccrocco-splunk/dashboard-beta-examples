@@ -4,8 +4,9 @@
 			"dataSources": {
 				"primary": "areasearch"
 			},
-			"description": "Using tokens from time range and multiselect",
+			"description": "Using tokens from time range and dropdown",
 			"options": {
+				"backgroundColor": "#23242B",
 				"chart.nullValueMode": "zero"
 			},
 			"title": "Enhanced Line Visualization",
@@ -79,24 +80,19 @@
 						"type": "rangevalue",
 						"ranges": [
 							{
-								"from": 7000,
+								"from": 10000,
 								"value": "#dc4e41",
+								"to": 20000
+							},
+							{
+								"from": 7000,
+								"value": "#f8be34",
 								"to": 10000
-							},
-							{
-								"from": 3000,
-								"value": "#f1813f",
-								"to": 7000
-							},
-							{
-								"from": 30,
-								"to": 3000,
-								"value": "#f4df7a"
 							},
 							{
 								"from": 0,
 								"value": "#53a051",
-								"to": 30
+								"to": 7000
 							}
 						]
 					}
@@ -107,7 +103,7 @@
 			"dataSources": {
 				"primary": "punchcardsearch"
 			},
-			"description": "Using tokens from time range and multiselect",
+			"description": "Using tokens from time range and dropdown",
 			"encoding": {
 				"category": "primary.sourcetype",
 				"size": "primary.count",
@@ -151,19 +147,19 @@
 				"orientation": "vertical",
 				"ranges": [
 					{
-						"from": 7000,
+						"from": 10000,
 						"value": "#CB3B43",
-						"to": 10000
+						"to": 20000
 					},
 					{
-						"from": 3000,
+						"from": 5000,
 						"value": "#f8be34",
-						"to": 7000
+						"to": 10000
 					},
 					{
 						"from": 0,
 						"value": "#4fa484",
-						"to": 3000
+						"to": 5000
 					}
 				]
 			},
@@ -189,19 +185,19 @@
 						"type": "rangevalue",
 						"ranges": [
 							{
-								"from": 5000,
+								"from": 10000,
 								"value": "#dc4e41",
-								"to": 10000
+								"to": 20000
 							},
 							{
-								"from": 3000,
+								"from": 5000,
 								"value": "#f8be34",
-								"to": 5000
+								"to": 10000
 							},
 							{
 								"from": 30,
 								"value": "#4fa484",
-								"to": 3000
+								"to": 5000
 							}
 						]
 					}
@@ -217,19 +213,19 @@
 				"orientation": "horizontal",
 				"ranges": [
 					{
-						"from": 7000,
+						"from": 10000,
 						"value": "#dc4e41",
-						"to": 10000
+						"to": 20000
 					},
 					{
-						"from": 3000,
+						"from": 5000,
 						"value": "#f8be34",
-						"to": 7000
+						"to": 10000
 					},
 					{
 						"from": 0,
 						"value": "#4fa484",
-						"to": 3000
+						"to": 5000
 					}
 				]
 			},
@@ -370,7 +366,7 @@
 		"areasearch": {
 			"name": "Area Chart Search",
 			"options": {
-				"query": "index=_internal sourcetype !=splunkd | timechart count by sourcetype",
+				"query": "index=_internal sourcetype=$dropdown$ | timechart count by sourcetype",
 				"queryParameters": {
 					"earliest": "$tr.earliest$",
 					"latest": "$tr.latest$"
@@ -431,7 +427,7 @@
 			"type": "ds.test"
 		},
 		"inputsearch": {
-			"name": "Search backing Multiselect Input",
+			"name": "Search backing Dropdown Input",
 			"options": {
 				"query": "index=_internal | stats count by sourcetype",
 				"queryParameters": {
@@ -476,7 +472,7 @@
 		"punchcardsearch": {
 			"name": "Punchcard Chart Search",
 			"options": {
-				"query": "index=_internal sourcetype!=splunkd AND sourcetype!=splunkd_ui_access| eval day=strftime(_time, \"%A\"), hour=strftime(_time, \"%I%p\")\n| stats count(sourcetype) as count by sourcetype, hour, day",
+				"query": "index=_internal sourcetype=$dropdown$| eval day=strftime(_time, \"%A\"), hour=strftime(_time, \"%I%p\")\n| stats count(sourcetype) as count by sourcetype, hour, day",
 				"queryParameters": {
 					"earliest": "$tr.earliest$",
 					"latest": "$tr.latest$"
@@ -591,10 +587,10 @@
 						"value": "*"
 					}
 				],
-				"token": "ms"
+				"token": "dropdown"
 			},
-			"title": "Select Sourcetype(s)",
-			"type": "input.multiselect"
+			"title": "Select Sourcetype",
+			"type": "input.dropdown"
 		}
 	},
 	"layout": {
@@ -686,7 +682,7 @@
 					"h": 230,
 					"w": 470,
 					"x": 1690,
-					"y": 750
+					"y": 740
 				},
 				"type": "block"
 			},
