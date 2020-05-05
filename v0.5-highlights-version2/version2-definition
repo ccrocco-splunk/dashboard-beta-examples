@@ -1,0 +1,648 @@
+{
+	"visualizations": {
+		"choropleth_viz": {
+			"dataSources": {
+				"primary": "svg_choropleth"
+			},
+			"type": "viz.choropleth.svg",
+			"options": {
+				"svg": "splunk-enterprise-kvstore://$state$",
+				"backgroundColor": "transparent"
+			},
+			"encoding": {
+				"featureId": "primary[0]",
+				"value": "primary[1]",
+				"fill": {
+					"field": "primary[1]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 500,
+								"value": "#F29BAC"
+							},
+							{
+								"from": 300,
+								"to": 500,
+								"value": "#415EC7"
+							},
+							{
+								"from": 150,
+								"to": 300,
+								"value": "#4F6DD9"
+							},
+							{
+								"from": 100,
+								"to": 150,
+								"value": "#5E79DE"
+							},
+							{
+								"from": 75,
+								"to": 100,
+								"value": "#7088E4"
+							},
+							{
+								"from": 50,
+								"to": 75,
+								"value": " #8297EA"
+							},
+							{
+								"from": 25,
+								"to": 50,
+								"value": "#95A7F1"
+							},
+							{
+								"from": 10,
+								"to": 25,
+								"value": "#A6B5F6"
+							},
+							{
+								"from": 1,
+								"to": 10,
+								"value": "#BAC6FE"
+							},
+							{
+								"to": 1,
+								"value": "#F5F5F5"
+							}
+						]
+					}
+				}
+			},
+			"title": "Splunk Usage Hotspots",
+			"description": ""
+		},
+		"line_viz": {
+			"type": "viz.line",
+			"encoding": {
+				"x": "primary._time"
+			},
+			"options": {
+				"backgroundColor": "#ffffff",
+				"fontColor": "#000000",
+				"seriesColors": "[#A870EF,#A9F5E7, #45D4BA,#1E6271,#602CA1,#9AE6F7,#2F8AA7,#422879,#F29BAC]"
+			},
+			"dataSources": {
+				"primary": "linesearch"
+			},
+			"title": "Number of Splunk Users in State, Per Day",
+			"description": ""
+		},
+		"area_viz": {
+			"type": "viz.area",
+			"encoding": {
+				"x": "primary._time",
+				"y": "primary.Daily_Downloads",
+				"y2": "primary.Hits",
+				"annotationColor": "annotation[2]",
+				"annotationLabel": "annotation[1]",
+				"annotationX": "annotation[0]"
+			},
+			"options": {
+				"chart.overlayFields": "Total",
+				"axisY2.enabled": true,
+				"axisY2.abbreviation": "auto",
+				"fieldColors": "{Hits: #FDAF93, Daily_Downloads: #6CD0F0}",
+				"axisTitleY.text": "Unique Daily Downloads",
+				"axisTitleY2.text": "Number of Google Hits",
+				"axisTitleX.text": "Date",
+				"axisTitleX.visibility": "collapsed",
+				"backgroundColor": "#ffffff",
+				"fontColor": "#000000",
+				"legend.placement": "right"
+			},
+			"dataSources": {
+				"primary": "areasearch",
+				"annotation": "annotation"
+			},
+			"title": "Daily Splunk Dashboards Beta Interest",
+			"description": ""
+		},
+		"text1_viz": {
+			"type": "viz.text",
+			"options": {
+				"content": "Dashboards Beta v0.5 Highlights: Version 2",
+				"fontWeight": "bold",
+				"fontSize": 40
+			}
+		},
+		"text2_viz": {
+			"type": "viz.text",
+			"options": {
+				"content": "How to set up this sample dashboard",
+				"fontWeight": "bold"
+			}
+		},
+		"text3_viz": {
+			"type": "viz.text",
+			"options": {
+				"content": "This dashboard uses SVGs that must be uploaded locally, combined with tokens. As a result, the path to your SVG location is unique, and must be manually set up.\n\n\n\n1) Download all of the sample SVG files provided alongside this dashboard definition.\n\n\n2) Using the visualization to the left, remove the existing SVG by clicking \"X\" under the \"Upload SVG\" text of the \"Visualization Settings\". \n\n\n3) Upload the first state SVG (under \"Visualization Settings\"). Note the URL in source mode, next to the \"svg\" option in the visualization definition. The SVG should now be persisted in your kvstore.\n\n\n4) Remove the SVG from the visualization, and repeat steps 2 and 3 for all other SVGs.\n\n\n5) In the \"inputs\" stanza of the definition, modify the token values corresponding to each state to be the SVGs' URL paths you noted in Step 3.\n\n\n6) Finally, modify the URL in the \"svg\" option of the \"choropleth_viz\" visualization in the  definition to consume the    $ state $   token passed by the input. This will now allow a dropdown selection to set a URL which is then passed to the Choropleth SVG to show.",
+				"fontSize": 18
+			}
+		},
+		"viz_TcuV9YOW": {
+			"type": "abslayout.line",
+			"options": {
+				"strokeColor": "#ACACAD",
+				"strokeWidth": 2
+			}
+		},
+		"viz_gEb4mwx9": {
+			"type": "abslayout.line",
+			"options": {
+				"strokeColor": "#ACACAD",
+				"strokeWidth": 2
+			}
+		},
+		"viz_7gwV5vXa": {
+			"type": "abslayout.line",
+			"options": {
+				"strokeColor": "#ACACAD",
+				"strokeWidth": 2
+			}
+		}
+	},
+	"dataSources": {
+		"annotation": {
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"2020-03-19T18:11:50.000-07:00",
+							"2020-03-20T18:13:25.000-07:00",
+							"2020-03-21T18:11:50.000-07:00",
+							"2020-03-22T18:13:25.000-07:00",
+							"2020-03-23T18:11:50.000-07:00",
+							"2020-03-24T18:13:25.000-07:00",
+							"2020-03-25T18:14:30.000-07:00"
+						],
+						[
+							"Annotation 1",
+							"Annotation 2",
+							"Annotation 3",
+							"Annotation 4",
+							"Annotation 5",
+							"Annotation 6",
+							"Annotation 7"
+						],
+						[
+							"#505158",
+							"#505158",
+							"#505158",
+							"#505158",
+							"#505158",
+							"#505158",
+							"#505158"
+						]
+					],
+					"fields": [
+						{
+							"groupby_rank": "0",
+							"name": "_time"
+						},
+						{
+							"name": "annotation_label"
+						},
+						{
+							"name": "annotation_color"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		},
+		"svg_choropleth": {
+			"name": "svg_choropleth",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"Kings",
+							"Nassau",
+							"Albany",
+							"SantaClara",
+							"ElDorado",
+							"Adams",
+							"Humboldt",
+							"Lake",
+							"Lassen",
+							"Mariposa",
+							"SantaBarbara",
+							"SantaCruz",
+							"",
+							"King",
+							"Cowlitz",
+							"Lincoln",
+							"Spokane",
+							"Stevens",
+							"Thurston",
+							"Columbia",
+							"Jefferson",
+							"Kings",
+							"Niagara",
+							"Monroe",
+							"Madison",
+							"Lewis",
+							"Yates",
+							"Oneida",
+							"Washington",
+							"Westchester",
+							"Allen",
+							"Acadia",
+							"Ascension",
+							"Assumption",
+							"Franklin",
+							"Grant",
+							"Iberville",
+							"Ocean",
+							"Atlantic",
+							"Jackson",
+							"Sabine",
+							"Vernon",
+							"WestCarroll",
+							"Bergen",
+							"Morris",
+							"Essex",
+							"Hudson",
+							"Sussex",
+							"Mercer",
+							"Camden"
+						],
+						[
+							"117",
+							"287",
+							"31",
+							"65",
+							"385",
+							"69",
+							"289",
+							"9",
+							"18762",
+							"23",
+							"11",
+							"61",
+							"28",
+							"43",
+							"12",
+							"11133",
+							"111",
+							"12",
+							"80",
+							"119",
+							"9",
+							"2223",
+							"69",
+							"16",
+							"14",
+							"10",
+							"211181",
+							"201",
+							"70",
+							"108",
+							"3",
+							"5223",
+							"128",
+							"62",
+							"58",
+							"178",
+							"2844",
+							"43",
+							"68",
+							"148",
+							"1686",
+							"33",
+							"225",
+							"19",
+							"4900",
+							"357",
+							"48",
+							"29",
+							"215",
+							"300"
+						]
+					],
+					"fields": [
+						{
+							"name": "county"
+						},
+						{
+							"name": "values"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		},
+		"linesearch": {
+			"name": "Linesearch",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"2020-03-17T18:10:46.000-07:00",
+							"2020-03-18T18:10:46.000-07:00",
+							"2020-03-19T18:11:47.000-07:00",
+							"2020-03-20T18:12:48.000-07:00",
+							"2020-03-21T18:10:46.000-07:00",
+							"2020-03-22T18:11:47.000-07:00",
+							"2020-03-23T18:12:48.000-07:00",
+							"2020-03-24T18:13:49.000-07:00",
+							"2020-03-25T18:15:50.000-07:00"
+						],
+						[
+							"20293",
+							"23420",
+							"1399",
+							"2460",
+							"4243",
+							"8553",
+							"9999",
+							"2323",
+							"3452",
+							"1213"
+						],
+						[
+							"2342",
+							"4352",
+							"7654",
+							"2332",
+							"1222",
+							"4441",
+							"8888",
+							"3223",
+							"5252",
+							"1267"
+						],
+						[
+							"7342",
+							"4352",
+							"7584",
+							"1332",
+							"9222",
+							"7441",
+							"7777",
+							"1231",
+							"7685",
+							"4353"
+						],
+						[
+							"10342",
+							"2352",
+							"9584",
+							"4332",
+							"9222",
+							"7461",
+							"7577",
+							"1231",
+							"7684",
+							"1353"
+						],
+						[
+							"1342",
+							"4352",
+							"7584",
+							"1332",
+							"4222",
+							"4441",
+							"4777",
+							"1231",
+							"9685",
+							"4353"
+						]
+					],
+					"fields": [
+						{
+							"name": "_time"
+						},
+						{
+							"name": "New York"
+						},
+						{
+							"name": "California"
+						},
+						{
+							"name": "Louisiana"
+						},
+						{
+							"name": "New Jersey"
+						},
+						{
+							"name": "Washington"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		},
+		"areasearch": {
+			"name": "Areasearch",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"2020-03-17T18:10:46.000-07:00",
+							"2020-03-18T18:10:46.000-07:00",
+							"2020-03-19T18:11:47.000-07:00",
+							"2020-03-20T18:12:48.000-07:00",
+							"2020-03-21T18:10:46.000-07:00",
+							"2020-03-22T18:11:47.000-07:00",
+							"2020-03-23T18:12:48.000-07:00",
+							"2020-03-24T18:13:49.000-07:00",
+							"2020-03-25T18:15:50.000-07:00"
+						],
+						[
+							"20293",
+							"23420",
+							"1399",
+							"2460",
+							"4243",
+							"8553",
+							"9999",
+							"2323",
+							"3452",
+							"1213"
+						],
+						[
+							"10.45",
+							"18.09",
+							"35.1",
+							"45.98",
+							"109.44",
+							"87.4",
+							"77.3",
+							"81.99",
+							"65.02",
+							"55.11"
+						]
+					],
+					"fields": [
+						{
+							"name": "_time"
+						},
+						{
+							"name": "Hits"
+						},
+						{
+							"name": "Daily_Downloads"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		}
+	},
+	"inputs": {
+		"selector": {
+			"type": "input.dropdown",
+			"options": {
+				"items": [
+					{
+						"label": "California",
+						"value": "5eab0a033ac5443b4e0c3aa4"
+					},
+					{
+						"label": "Louisiana",
+						"value": "5eab0a7e3ac5443b4e0c3aa5"
+					},
+					{
+						"label": "New York",
+						"value": "5eab0a9d3ac5443b4e0c3aa6"
+					},
+					{
+						"label": "New Jersey",
+						"value": "5eab0abd3ac5443b4e0c3aa7"
+					},
+					{
+						"label": "Washington",
+						"value": "5eab0ad73ac5443b4e0c3aa8"
+					}
+				],
+				"defaultValue": "5eab0a9d3ac5443b4e0c3aa6",
+				"token": "state"
+			},
+			"title": "Select State"
+		}
+	},
+	"layout": {
+		"type": "absolute",
+		"options": {
+			"backgroundColor": "#ffffff",
+			"width": 1690,
+			"height": 1140,
+			"display": "auto-scale"
+		},
+		"structure": [
+			{
+				"item": "line_viz",
+				"type": "block",
+				"position": {
+					"x": 40,
+					"y": 820,
+					"w": 780,
+					"h": 310
+				}
+			},
+			{
+				"item": "choropleth_viz",
+				"type": "block",
+				"position": {
+					"x": 50,
+					"y": 80,
+					"w": 780,
+					"h": 660
+				}
+			},
+			{
+				"item": "area_viz",
+				"type": "block",
+				"position": {
+					"x": 930,
+					"y": 830,
+					"w": 750,
+					"h": 280
+				}
+			},
+			{
+				"item": "text1_viz",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 0,
+					"w": 820,
+					"h": 60
+				}
+			},
+			{
+				"item": "text2_viz",
+				"type": "block",
+				"position": {
+					"x": 910,
+					"y": 50,
+					"w": 680,
+					"h": 50
+				}
+			},
+			{
+				"item": "text3_viz",
+				"type": "block",
+				"position": {
+					"x": 910,
+					"y": 130,
+					"w": 740,
+					"h": 400
+				}
+			},
+			{
+				"item": "viz_TcuV9YOW",
+				"type": "line",
+				"position": {
+					"from": {
+						"x": 880,
+						"y": 750
+					},
+					"to": {
+						"x": 880,
+						"y": 73
+					}
+				}
+			},
+			{
+				"item": "viz_gEb4mwx9",
+				"type": "line",
+				"position": {
+					"from": {
+						"x": 880,
+						"y": 843
+					},
+					"to": {
+						"x": 879,
+						"y": 1094
+					}
+				}
+			},
+			{
+				"item": "viz_7gwV5vXa",
+				"type": "line",
+				"position": {
+					"from": {
+						"x": 51,
+						"y": 794
+					},
+					"to": {
+						"x": 1645,
+						"y": 793
+					}
+				}
+			}
+		],
+		"globalInputs": [
+			"selector"
+		]
+	},
+	"description": "This dashboard uses a Choropleth SVG visualization with a dropdown input to show a different state map & its relevant data based on the token selected. This dashboard uses completely fabricated data.",
+	"title": "Dashboards Beta v0.5 Highlights - Version 2"
+}
