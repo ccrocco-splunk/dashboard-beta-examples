@@ -1,0 +1,432 @@
+{
+	"visualizations": {
+		"viz_YnFD4eyE": {
+			"type": "viz.text",
+			"options": {
+				"content": "Dashboards Beta v0.5 Highlights: Version 1",
+				"textColor": "#ffffff",
+				"fontWeight": "bold",
+				"fontSize": 40
+			}
+		},
+		"viz_LZvdFE1C": {
+			"type": "viz.rectangle",
+			"options": {
+				"fill": "#212527",
+				"stroke": "transparent"
+			}
+		},
+		"viz_MivTFaN5": {
+			"type": "viz.singlevalue",
+			"options": {
+				"majorFontSize": 50,
+				"deltaFontSize": 20
+			},
+			"dataSources": {
+				"primary": "SVSearch_A"
+			},
+			"title": "Major Font Size: 50",
+			"description": "Delta Font Size: 20"
+		},
+		"viz_IGHZI82N": {
+			"type": "viz.singlevalue",
+			"options": {
+				"majorFontSize": 50,
+				"deltaFontSize": 20
+			},
+			"dataSources": {
+				"primary": "SVSearch_A"
+			},
+			"title": "Major Font Size: 50",
+			"description": "Delta Font Size: 80"
+		},
+		"viz_qxZ0apyU": {
+			"type": "viz.choropleth.svg",
+			"options": {
+				"svg": "splunk-enterprise-kvstore://5ea9bee13ac5443b4e0c3aa1"
+			},
+			"encoding": {
+				"featureId": "primary[0]",
+				"value": "primary[1]",
+				"fill": {
+					"field": "primary[1]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 65000,
+								"value": "#49eba8"
+							},
+							{
+								"from": 40000,
+								"to": 65000,
+								"value": "#F4DF7A"
+							},
+							{
+								"from": 20000,
+								"to": 40000,
+								"value": "#FC9850"
+							},
+							{
+								"to": 20000,
+								"value": "#FF7152"
+							}
+						]
+					}
+				}
+			},
+			"dataSources": {
+				"primary": "campusdata"
+			}
+		},
+		"viz_IkDgYzqW": {
+			"type": "viz.singlevalue",
+			"options": {
+				"majorFontSize": 50,
+				"deltaFontSize": 20
+			},
+			"dataSources": {
+				"primary": "SVSearch_B"
+			},
+			"title": "Major Font Size: 50",
+			"description": "Delta Font Size: 20"
+		},
+		"viz_3hNBk7xj": {
+			"type": "viz.singlevalue",
+			"options": {
+				"majorFontSize": 50,
+				"deltaFontSize": 20
+			},
+			"dataSources": {
+				"primary": "SVSearch_B"
+			},
+			"title": "Major Font Size: 150",
+			"description": "Delta Font Size: 20"
+		},
+		"viz_ltLkBu1P": {
+			"type": "viz.table",
+			"options": {
+				"rowTextColorEven": "#ACACAD",
+				"rowTextColorOdd": "#ACACAD",
+				"headerTextColor": "#ffffff",
+				"rowBackgroundColorEven": "transparent"
+			},
+			"dataSources": {
+				"primary": "campusdata"
+			}
+		},
+		"viz_dw8GaDxO": {
+			"type": "viz.text",
+			"options": {
+				"content": "- Choropleth SVGs must be uploaded locally. You may need to modify the local kvstore path in this dashboard definition for the visualization to render.\n\n- All searches on this dashboard globally refresh on a 10s interval. \n\n- After navigating away from page, all running searches are cancelled after 10s in order to preserve resources.",
+				"fontSize": 16,
+				"textColor": "#708794"
+			}
+		},
+		"viz_RbhlMWSp": {
+			"type": "viz.rectangle",
+			"options": {
+				"fill": "#212527",
+				"stroke": "transparent"
+			}
+		},
+		"viz_yeXCHlf1": {
+			"type": "viz.text",
+			"options": {
+				"content": "About This Dashboard",
+				"textColor": "#ACACAD"
+			}
+		},
+		"viz_qCmytAfk": {
+			"type": "viz.singlevalue",
+			"options": {
+				"majorFontSize": 50,
+				"deltaFontSize": 20
+			},
+			"dataSources": {
+				"primary": "ds_dXxACTns_SVSearch_B"
+			},
+			"title": "Major Font Size: 50",
+			"description": "Delta Font Size: 20"
+		},
+		"viz_1h4j2DxH": {
+			"type": "viz.column",
+			"options": {
+				"chart.columnSpacing": 2,
+				"axisY.minimumNumber": 0,
+				"axisTitleX.visibility": "collapsed",
+				"chart.stackMode": "stacked",
+				"seriesColors": "[#49eba8,#F4DF7A,#FC9850, #FF7152]"
+			},
+			"title": "Network Connection Summary",
+			"dataSources": {
+				"primary": "columnsearch"
+			}
+		}
+	},
+	"dataSources": {
+		"columnsearch": {
+			"name": "Column Chart Search",
+			"options": {
+				"data": {
+					"columns": [
+						[
+							"ATX-270-B",
+							"ATX-420-B",
+							"RF-420",
+							"M-350",
+							"N-224",
+							"KRH-356-A"
+						],
+						[
+							"600",
+							"525",
+							"295",
+							"213",
+							"122",
+							"19"
+						],
+						[
+							"87.966380",
+							"50.381304",
+							"60.023780",
+							"121.183272",
+							"70.250513",
+							"90.194752"
+						],
+						[
+							"600",
+							"525",
+							"295",
+							"213",
+							"122",
+							"19"
+						],
+						[
+							"19",
+							"122",
+							"213",
+							"295",
+							"525",
+							"600"
+						]
+					],
+					"fields": [
+						{
+							"name": "sourcetype"
+						},
+						{
+							"name": "Healthy"
+						},
+						{
+							"name": "Passing"
+						},
+						{
+							"name": "Warning"
+						},
+						{
+							"name": "Critical"
+						}
+					]
+				},
+				"meta": {}
+			},
+			"type": "ds.test"
+		},
+		"campusdata": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-4h@m",
+					"latest": "now"
+				},
+				"query": "| inputlookup choropleth_campus.csv \n|  table Building Count"
+			},
+			"name": "Campus Search"
+		},
+		"SVSearch_A": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-60m@m",
+					"latest": "now"
+				},
+				"query": "index=_internal source=\"/root/splunk_dashboard_develop/splunk/var/log/splunk/splunkd_access.log\"\n|  timechart count"
+			},
+			"name": "Single Value Search A"
+		},
+		"SVSearch_B": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-7d@d",
+					"latest": "now"
+				},
+				"query": "index=_internal source=\"/root/splunk_dashboard_develop/splunk/var/log/splunk/splunkd_access.log\"\n|  timechart span=6h count"
+			},
+			"name": "Single Value Search B"
+		},
+		"ds_dXxACTns_SVSearch_B": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-1d@d",
+					"latest": "now"
+				},
+				"query": "index=_internal source=\"/root/splunk_dashboard_develop/splunk/var/log/splunk/splunkd_access.log\"\n|  timechart span=1m count"
+			},
+			"name": "Single Value Search C"
+		}
+	},
+	"inputs": {},
+	"layout": {
+		"type": "absolute",
+		"options": {
+			"backgroundColor": "#08090A",
+			"width": 1670,
+			"height": 920,
+			"display": "auto-scale"
+		},
+		"structure": [
+			{
+				"item": "viz_LZvdFE1C",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 70,
+					"w": 750,
+					"h": 570
+				}
+			},
+			{
+				"item": "viz_YnFD4eyE",
+				"type": "block",
+				"position": {
+					"x": 10,
+					"y": 0,
+					"w": 820,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_MivTFaN5",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 650,
+					"w": 250,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_IGHZI82N",
+				"type": "block",
+				"position": {
+					"x": 282,
+					"y": 650,
+					"w": 360,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_qxZ0apyU",
+				"type": "block",
+				"position": {
+					"x": 35,
+					"y": 100,
+					"w": 720,
+					"h": 510
+				}
+			},
+			{
+				"item": "viz_IkDgYzqW",
+				"type": "block",
+				"position": {
+					"x": 653,
+					"y": 650,
+					"w": 250,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_3hNBk7xj",
+				"type": "block",
+				"position": {
+					"x": 916,
+					"y": 650,
+					"w": 360,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_ltLkBu1P",
+				"type": "block",
+				"position": {
+					"x": 780,
+					"y": 270,
+					"w": 330,
+					"h": 370
+				}
+			},
+			{
+				"item": "viz_RbhlMWSp",
+				"type": "block",
+				"position": {
+					"x": 780,
+					"y": 70,
+					"w": 870,
+					"h": 190
+				}
+			},
+			{
+				"item": "viz_yeXCHlf1",
+				"type": "block",
+				"position": {
+					"x": 790,
+					"y": 70,
+					"w": 280,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_dw8GaDxO",
+				"type": "block",
+				"position": {
+					"x": 800,
+					"y": 110,
+					"w": 850,
+					"h": 140
+				}
+			},
+			{
+				"item": "viz_qCmytAfk",
+				"type": "block",
+				"position": {
+					"x": 1290,
+					"y": 650,
+					"w": 360,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_1h4j2DxH",
+				"type": "block",
+				"position": {
+					"x": 1120,
+					"y": 270,
+					"w": 530,
+					"h": 370
+				}
+			}
+		]
+	},
+	"defaults": {
+		"ds.search": {
+			"options": {
+				"refresh": "10s"
+			}
+		}
+	},
+	"description": "This dashboard shows a basic Choropleth SVG with data from a lookup and font size on single values. This dashboard uses completely fabricated data.",
+	"title": "Dashboards Beta v0.5 Highlights"
+}
