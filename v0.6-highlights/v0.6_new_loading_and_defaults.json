@@ -1,0 +1,864 @@
+{
+	"visualizations": {
+		"viz_LKLC6aUb": {
+			"type": "viz.area",
+			"options": {
+				"backgroundColor": "black"
+			},
+			"dataSources": {
+				"primary": "ds_E4bbdtwS"
+			},
+			"title": "Has a progress bar due to area default",
+			"description": "Overrides global default"
+		},
+		"viz_tpRnLS1I": {
+			"type": "viz.singlevalue",
+			"showProgressBar": true,
+			"options": {
+				"showSparkline": false,
+				"backgroundColor": "black"
+			},
+			"title": "Does have a progress bar",
+			"description": "Due to single viz override",
+			"dataSources": {
+				"primary": "ds_o7IqGHcO"
+			}
+		},
+		"viz_0PURB1zq": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_S4gw1TXe"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 100,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 70,
+								"to": 100,
+								"value": "#ff7152"
+							},
+							{
+								"from": 50,
+								"to": 70,
+								"value": "#fc9850"
+							},
+							{
+								"from": 30,
+								"to": 50,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 10,
+								"to": 30,
+								"value": "#4beba8"
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_d9rHmb6e": {
+			"type": "viz.singlevalue",
+			"showProgressBar": true,
+			"options": {
+				"backgroundColor": "black"
+			},
+			"title": "Does have a progress bar",
+			"description": "Due to single viz override",
+			"dataSources": {
+				"primary": "ds_5Bz2VyBy"
+			}
+		},
+		"viz_1yAC0Krw": {
+			"type": "viz.text",
+			"options": {
+				"content": "Do not have progress bars due to single global default and the lack of a viz type or individual viz override ",
+				"fontSize": 18
+			}
+		},
+		"viz_sY4Mym5S": {
+			"type": "viz.rectangle",
+			"options": {
+				"stroke": "transparent",
+				"fill": "#000000"
+			}
+		},
+		"viz_SpW3iWQQ": {
+			"type": "viz.line",
+			"options": {
+				"backgroundColor": "black"
+			},
+			"dataSources": {
+				"primary": "ds_sJ1sIAyM_ds_E4bbdtwS"
+			},
+			"title": "Does not have a progress bar",
+			"description": "Due to global defaults"
+		},
+		"viz_72zdhYuK": {
+			"type": "viz.area",
+			"options": {
+				"backgroundColor": "black"
+			},
+			"dataSources": {
+				"primary": "ds_WlKpQPzF_ds_E4bbdtwS"
+			},
+			"title": "Does not have a progress bar",
+			"description": "Viz setting overrides area viz default"
+		},
+		"viz_g9DEiujz": {
+			"type": "viz.punchcard",
+			"showProgressBar": true,
+			"options": {
+				"backgroundColor": "black"
+			},
+			"dataSources": {
+				"primary": "ds_Tgdj87ro"
+			},
+			"title": "Demonstration of fail state",
+			"description": "Shows more information due to individual viz exception overriding all viz global default"
+		},
+		"viz_yGUWKUys": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_6ockQoeb"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 10000,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 7000,
+								"value": "#ff7152",
+								"to": 10000
+							},
+							{
+								"from": 5000,
+								"value": "#fc9850",
+								"to": 7000
+							},
+							{
+								"from": 3000,
+								"value": "#f4df7a",
+								"to": 5000
+							},
+							{
+								"from": 1000,
+								"value": "#4beba8",
+								"to": 3000
+							},
+							{
+								"to": 1000,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_QLl7zWJR": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_sxCuglc2_ds_S4gw1TXe"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 100,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 70,
+								"to": 100,
+								"value": "#ff7152"
+							},
+							{
+								"from": 50,
+								"to": 70,
+								"value": "#fc9850"
+							},
+							{
+								"from": 30,
+								"to": 50,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 10,
+								"to": 30,
+								"value": "#4beba8"
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_64aW0Rdl": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_XR3uBWA9_ds_6ockQoeb"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 10000,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 7000,
+								"value": "#ff7152",
+								"to": 10000
+							},
+							{
+								"from": 5000,
+								"value": "#fc9850",
+								"to": 7000
+							},
+							{
+								"from": 3000,
+								"value": "#f4df7a",
+								"to": 5000
+							},
+							{
+								"from": 1000,
+								"value": "#4beba8",
+								"to": 3000
+							},
+							{
+								"to": 1000,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_ih6K4XUO": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_8uDyExCe_ds_sxCuglc2_ds_S4gw1TXe"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 100,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 70,
+								"to": 100,
+								"value": "#ff7152"
+							},
+							{
+								"from": 50,
+								"to": 70,
+								"value": "#fc9850"
+							},
+							{
+								"from": 30,
+								"to": 50,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 10,
+								"to": 30,
+								"value": "#4beba8"
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_jjxkapYN": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_0NQSkuJ3_ds_XR3uBWA9_ds_6ockQoeb"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 10000,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 7000,
+								"value": "#ff7152",
+								"to": 10000
+							},
+							{
+								"from": 5000,
+								"value": "#fc9850",
+								"to": 7000
+							},
+							{
+								"from": 3000,
+								"value": "#f4df7a",
+								"to": 5000
+							},
+							{
+								"from": 1000,
+								"value": "#4beba8",
+								"to": 3000
+							},
+							{
+								"to": 1000,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_ESr3BGxv": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_fOfJsTPV_ds_8uDyExCe_ds_sxCuglc2_ds_S4gw1TXe"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 100,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 70,
+								"to": 100,
+								"value": "#ff7152"
+							},
+							{
+								"from": 50,
+								"to": 70,
+								"value": "#fc9850"
+							},
+							{
+								"from": 30,
+								"to": 50,
+								"value": "#f4df7a"
+							},
+							{
+								"from": 10,
+								"to": 30,
+								"value": "#4beba8"
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_KYSZUv3V": {
+			"type": "viz.singlevalue",
+			"options": {},
+			"title": "",
+			"description": "",
+			"dataSources": {
+				"primary": "ds_mpa1GrjR_ds_0NQSkuJ3_ds_XR3uBWA9_ds_6ockQoeb"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 10000,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 7000,
+								"value": "#ff7152",
+								"to": 10000
+							},
+							{
+								"from": 5000,
+								"value": "#fc9850",
+								"to": 7000
+							},
+							{
+								"from": 3000,
+								"value": "#f4df7a",
+								"to": 5000
+							},
+							{
+								"from": 1000,
+								"value": "#4beba8",
+								"to": 3000
+							},
+							{
+								"to": 1000,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		}
+	},
+	"dataSources": {
+		"ds_E4bbdtwS": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"_internal\" | where isnum(status) and status >200 | timechart count by status"
+			},
+			"name": "timechart_search"
+		},
+		"ds_N9v7xmH9": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"_internal\" | stats count by clientip"
+			},
+			"name": "Piechart_search"
+		},
+		"ds_BxfCQVhz": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"_internal\" clientip=\"*\" | top limit=1 clientip | table percent"
+			},
+			"name": "gauge_search"
+		},
+		"ds_xVeLdq8H_ds_VpRV8Ffc": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"_internal\" status!=\"200\" method =\"*\" | head limit=50 | table source, method, status"
+			},
+			"name": "table_search"
+		},
+		"ds_EsBp7emr": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-24h@h",
+					"latest": "now"
+				},
+				"query": "index=\"_internal\" | where isnum(status) and status >200 | timechart count by status"
+			},
+			"name": "index_internal_timechart_count"
+		},
+		"ds_1d3sogrv_ds_EsBp7emr": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-24h@h",
+					"latest": "now"
+				},
+				"query": "index=\"_internal\" sourcetype=\"scheduler\"  | stats count"
+			},
+			"name": "Copy of scheduler_search"
+		},
+		"ds_o7IqGHcO": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-1mon@mon",
+					"latest": "@mon"
+				},
+				"query": "index=_internal \n|  timechart count"
+			},
+			"name": "Search_1"
+		},
+		"ds_5Bz2VyBy": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "@mon",
+					"latest": "now"
+				},
+				"query": "index=_internal \n|  stats count"
+			},
+			"name": "Search_2"
+		},
+		"ds_sJ1sIAyM_ds_E4bbdtwS": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"_internal\" | where isnum(status) and status >200 | timechart count by status"
+			},
+			"name": "Copy of timechart_search"
+		},
+		"ds_WlKpQPzF_ds_E4bbdtwS": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"_internal\" | where isnum(status) and status >200 | timechart count by status"
+			},
+			"name": "Copy of timechart_search"
+		},
+		"ds_Tgdj87ro": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=_fakeIndex \n| source=nosuchthing"
+			},
+			"name": "Search_3"
+		},
+		"ds_S4gw1TXe": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "rt-45m",
+					"latest": "rt"
+				},
+				"query": "index=_internal \n| stats count"
+			},
+			"name": "Search_4"
+		},
+		"ds_6ockQoeb": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-45m",
+					"latest": "now"
+				},
+				"query": "index=_audit \n| stats count"
+			},
+			"name": "Search_5"
+		},
+		"ds_sxCuglc2_ds_S4gw1TXe": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-10m",
+					"latest": "now"
+				},
+				"query": "index=_internal \n| stats count"
+			},
+			"name": "Copy of Search_4"
+		},
+		"ds_XR3uBWA9_ds_6ockQoeb": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-10m",
+					"latest": "now"
+				},
+				"query": "index=_audit \n| stats count"
+			},
+			"name": "Copy of Search_5"
+		},
+		"ds_8uDyExCe_ds_sxCuglc2_ds_S4gw1TXe": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-5m",
+					"latest": "now"
+				},
+				"query": "index=_internal \n| stats count"
+			},
+			"name": "Copy of Copy of Search_4"
+		},
+		"ds_0NQSkuJ3_ds_XR3uBWA9_ds_6ockQoeb": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-5m",
+					"latest": "now"
+				},
+				"query": "index=_audit \n| stats count"
+			},
+			"name": "Copy of Copy of Search_5"
+		},
+		"ds_fOfJsTPV_ds_8uDyExCe_ds_sxCuglc2_ds_S4gw1TXe": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-1m",
+					"latest": "now"
+				},
+				"query": "index=_internal \n| stats count"
+			},
+			"name": "Copy of Copy of Copy of Search_4"
+		},
+		"ds_mpa1GrjR_ds_0NQSkuJ3_ds_XR3uBWA9_ds_6ockQoeb": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-1m",
+					"latest": "now"
+				},
+				"query": "index=_audit \n| stats count"
+			},
+			"name": "Copy of Copy of Copy of Search_5"
+		}
+	},
+	"inputs": {
+		"input1": {
+			"type": "input.dropdown",
+			"options": {
+				"items": [
+					{
+						"label": "30 seconds",
+						"value": "30s"
+					},
+					{
+						"label": "1 minute",
+						"value": "1m"
+					},
+					{
+						"label": "5 minutes",
+						"value": "5m"
+					}
+				],
+				"defaultValue": "5m",
+				"token": "ref"
+			},
+			"title": "Set Refresh Rate"
+		}
+	},
+	"layout": {
+		"type": "absolute",
+		"options": {
+			"width": 2150,
+			"height": 1090,
+			"showTitleAndDescription": true,
+			"display": "auto-scale"
+		},
+		"structure": [
+			{
+				"item": "viz_sY4Mym5S",
+				"type": "block",
+				"position": {
+					"x": 1250,
+					"y": 300,
+					"w": 880,
+					"h": 380
+				}
+			},
+			{
+				"item": "viz_LKLC6aUb",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 20,
+					"w": 1210,
+					"h": 370
+				}
+			},
+			{
+				"item": "viz_tpRnLS1I",
+				"type": "block",
+				"position": {
+					"x": 1250,
+					"y": 20,
+					"w": 430,
+					"h": 260
+				}
+			},
+			{
+				"item": "viz_0PURB1zq",
+				"type": "block",
+				"position": {
+					"x": 1420,
+					"y": 370,
+					"w": 110,
+					"h": 110
+				}
+			},
+			{
+				"item": "viz_d9rHmb6e",
+				"type": "block",
+				"position": {
+					"x": 1700,
+					"y": 20,
+					"w": 430,
+					"h": 260
+				}
+			},
+			{
+				"item": "viz_1yAC0Krw",
+				"type": "block",
+				"position": {
+					"x": 1260,
+					"y": 300,
+					"w": 870,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_SpW3iWQQ",
+				"type": "block",
+				"position": {
+					"x": 1250,
+					"y": 700,
+					"w": 880,
+					"h": 370
+				}
+			},
+			{
+				"item": "viz_72zdhYuK",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 410,
+					"w": 1210,
+					"h": 370
+				}
+			},
+			{
+				"item": "viz_g9DEiujz",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 790,
+					"w": 1210,
+					"h": 280
+				}
+			},
+			{
+				"item": "viz_yGUWKUys",
+				"type": "block",
+				"position": {
+					"x": 1420,
+					"y": 520,
+					"w": 110,
+					"h": 110
+				}
+			},
+			{
+				"item": "viz_QLl7zWJR",
+				"type": "block",
+				"position": {
+					"x": 1560,
+					"y": 370,
+					"w": 110,
+					"h": 110
+				}
+			},
+			{
+				"item": "viz_64aW0Rdl",
+				"type": "block",
+				"position": {
+					"x": 1560,
+					"y": 520,
+					"w": 110,
+					"h": 110
+				}
+			},
+			{
+				"item": "viz_ih6K4XUO",
+				"type": "block",
+				"position": {
+					"x": 1700,
+					"y": 370,
+					"w": 110,
+					"h": 110
+				}
+			},
+			{
+				"item": "viz_jjxkapYN",
+				"type": "block",
+				"position": {
+					"x": 1700,
+					"y": 520,
+					"w": 110,
+					"h": 110
+				}
+			},
+			{
+				"item": "viz_ESr3BGxv",
+				"type": "block",
+				"position": {
+					"x": 1840,
+					"y": 370,
+					"w": 110,
+					"h": 110
+				}
+			},
+			{
+				"item": "viz_KYSZUv3V",
+				"type": "block",
+				"position": {
+					"x": 1840,
+					"y": 520,
+					"w": 110,
+					"h": 110
+				}
+			}
+		],
+		"globalInputs": [
+			"input1"
+		]
+	},
+	"defaults": {
+		"visualizations": {
+			"global": {
+				"showProgressBar": false
+			},
+			"viz.area": {
+				"showProgressBar": true
+			}
+		},
+		"datasources": {
+			"global": {
+				"options": {
+					"refresh": "$ref$"
+				}
+			}
+		}
+	},
+	"description": "",
+	"title": "Progress Bar Demonstration"
+}
