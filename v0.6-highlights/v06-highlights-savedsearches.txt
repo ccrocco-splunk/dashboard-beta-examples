@@ -1,0 +1,26 @@
+Follow these instructions to create the saved searches you will need to run the v0.6 highlights dashboard.
+
+---
+
+Create the saved search with no schedule:
+
+Use the following search, with "last 24 hours", and save as a report:
+index=_internal | where isnum(status) and status > 199 | timechart count by status
+
+Title your report "Count of Status - No Schedule"
+
+---
+
+Create the saved search with a schedule: 
+
+Use the following search, with "last 24 hours", and save as a report:
+index=_internal | where isnum(status) and status > 199 | timechart count by status
+
+Title your report "Count of Status - Schedule" 
+
+Go to your report to add any schedule you would like.
+
+---
+
+Tips:
+Make sure both reports are saved in the "search" app

@@ -1,0 +1,167 @@
+{
+	"visualizations": {
+		"viz_IDzJwxXu": {
+			"type": "viz.rectangle"
+		},
+		"viz_sgurgWtX": {
+			"type": "viz.text",
+			"options": {
+				"content": "How to show or hide the progress bar on your charts ",
+				"fontSize": 28
+			}
+		},
+		"vizProgressBar": {
+			"type": "viz.area",
+			"options": {
+				"refresh": "5s"
+			},
+			"showProgressBar": true,
+			"title": "Saved Search with no Schedule",
+			"dataSources": {
+				"primary": "reportNoSchedule"
+			},
+			"description": "Shows the latest results"
+		},
+		"viz_noProgressBar": {
+			"type": "viz.area",
+			"options": {},
+			"showProgressBar": false,
+			"title": "Saved Search with Schedule",
+			"description": "Shows the latest results from the last scheduled run",
+			"dataSources": {
+				"primary": "reportWithScheduleNoRefresh"
+			}
+		},
+		"viz_MT64EVZp": {
+			"type": "viz.text",
+			"options": {
+				"content": "Add a saved search as a data source ",
+				"fontSize": 28
+			}
+		},
+		"viz_rINagMHK": {
+			"type": "viz.text",
+			"options": {
+				"content": "1. Set up saved searches following the instructions included alongside this example dashboard.\n\n2. Add the saved searches as data sources in source mode using \"ref\" for the name of the saved search and \"app\" where the saved searches are saved (view this dashboard in source mode for an example). If no app is specified, Splunk will look in the Search & Reporting app for your saved search.\n\n3. Add a chart to your canvas, and select your saved search as the primary data source",
+				"fontSize": 16
+			}
+		},
+		"viz_H2spqRqV": {
+			"type": "viz.text",
+			"options": {
+				"content": "Specify whether to show or hide the progress bar on charts in source mode. Individual chart settings will supersede chart type settings, which supersede global settings.\n\nGlobal:\nIn this dashboard, the global setting is \"false\". Find this in source mode under \"defaults\", under \"visualizations\". \n\nChart type:\nThe area chart type setting is \"true\". Find this under \"defaults\", under \"visualizations\", under \"viz.area\".\n\nIndividual chart:\nThe chart with a scheduled saved search is \"false\". Find this under viz_noProgressBar \"options\".",
+				"fontSize": 16
+			}
+		}
+	},
+	"dataSources": {
+		"reportNoSchedule": {
+			"type": "ds.savedSearch",
+			"options": {
+				"ref": "Count of Status - No Schedule",
+				"app": "search"
+			}
+		},
+		"reportWithScheduleNoRefresh": {
+			"type": "ds.savedSearch",
+			"options": {
+				"ref": "Count of Status - Schedule",
+				"app": "search"
+			}
+		}
+	},
+	"inputs": {},
+	"layout": {
+		"type": "absolute",
+		"options": {
+			"width": 1400,
+			"backgroundColor": "#000000",
+			"height": 700,
+			"display": "auto-scale"
+		},
+		"structure": [
+			{
+				"item": "viz_IDzJwxXu",
+				"type": "block",
+				"position": {
+					"x": 720,
+					"y": 0,
+					"w": 670,
+					"h": 610
+				}
+			},
+			{
+				"item": "viz_sgurgWtX",
+				"type": "block",
+				"position": {
+					"x": 720,
+					"y": 250,
+					"w": 680,
+					"h": 70
+				}
+			},
+			{
+				"item": "vizProgressBar",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"w": 710,
+					"h": 300
+				}
+			},
+			{
+				"item": "viz_noProgressBar",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 310,
+					"w": 710,
+					"h": 300
+				}
+			},
+			{
+				"item": "viz_MT64EVZp",
+				"type": "block",
+				"position": {
+					"x": 720,
+					"y": 0,
+					"w": 540,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_rINagMHK",
+				"type": "block",
+				"position": {
+					"x": 720,
+					"y": 40,
+					"w": 660,
+					"h": 210
+				}
+			},
+			{
+				"item": "viz_H2spqRqV",
+				"type": "block",
+				"position": {
+					"x": 720,
+					"y": 300,
+					"w": 660,
+					"h": 310
+				}
+			}
+		]
+	},
+	"defaults": {
+		"visualizations": {
+			"global": {
+				"showProgressBar": false
+			},
+			"viz.area": {
+				"showProgressBar": true
+			}
+		}
+	},
+	"description": "This dashboard uses Saved Searches as a datasource to power visualizations. This dashboard also shows a progress bar when visualizations are loading.",
+	"title": "Dashboards Beta v0.6 Highlights"
+}
