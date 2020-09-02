@@ -1,0 +1,283 @@
+{
+	"visualizations": {
+		"viz_2m0gp1CP": {
+			"type": "viz.rectangle",
+			"options": {
+				"stroke": "#31373e"
+			}
+		},
+		"viz_1FWG4GA3": {
+			"type": "viz.text",
+			"options": {
+				"content": "Show the \"Last Updated Time\" on charts"
+			}
+		},
+		"viz_JCzRTwGn": {
+			"type": "viz.area",
+			"options": {
+				"legend.placement": "none",
+				"seriesColors": "[#7EEFDA, #A870EF,#A9F5E7,#8747DA,#6CD0F0]"
+			},
+			"dataSources": {
+				"primary": "ds_YkjoU9L2"
+			},
+			"title": "Real time search"
+		},
+		"viz_Qh6Hvsu6": {
+			"type": "viz.column",
+			"options": {
+				"seriesColors": "[#A870EF]"
+			},
+			"dataSources": {
+				"primary": "ds_KXiOnk0i"
+			},
+			"title": "showLastUpdated = true"
+		},
+		"viz_brlKgRbq": {
+			"type": "viz.column",
+			"options": {
+				"seriesColors": "[#7EEFDA]"
+			},
+			"dataSources": {
+				"primary": "ds_EtYzZX5k_ds_KXiOnk0i"
+			},
+			"showLastUpdated": false,
+			"title": "showLastUpdated = false"
+		},
+		"viz_1Pmogm23": {
+			"type": "viz.rectangle",
+			"options": {
+				"stroke": "#31373e",
+				"fill": "#31373e"
+			}
+		},
+		"viz_7QV1huRH": {
+			"type": "viz.text",
+			"options": {
+				"content": "How to configure showLastUpdate in the source editor:\n\nIn the source editor, the global default for showLastUpdated is 'false' for all charts. However, for viz.area and viz.column charts, showLastUpdated is 'true', meaning these types of charts will show the Last Update time despite the global setting. In the right-most chart, showLastUpdate time is 'false', meaning that Last Update time will not show on this particular chart, despite the viz.column setting. ",
+				"fontSize": 20
+			}
+		},
+		"viz_06CD4HtG": {
+			"type": "abslayout.line",
+			"options": {
+				"strokeWidth": 3,
+				"strokeDasharray": 4
+			}
+		},
+		"viz_lqdEDa1X": {
+			"type": "viz.text",
+			"options": {
+				"content": "Export this dashboard to PDF or PNG"
+			}
+		},
+		"viz_XeNsQKs5": {
+			"type": "viz.rectangle",
+			"options": {
+				"stroke": "#31373e"
+			}
+		},
+		"viz_pDMSdLb4": {
+			"type": "viz.rectangle",
+			"options": {
+				"stroke": "#31373e",
+				"fill": "#31373e"
+			}
+		},
+		"viz_8i9zjVyM": {
+			"type": "viz.text",
+			"options": {
+				"content": "To export your dashboard to PDF or PNG, look for the \"Download\" button in the top right corner of your dashboard in View Mode. You can then select PNG or PDF format. If your dashboard has searches that are still running, you will see a message that searches have not finished, and your dashboard export will show the incomplete search results. ",
+				"fontSize": 20
+			}
+		}
+	},
+	"dataSources": {
+		"ds_YkjoU9L2": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "rt-1h",
+					"latest": "rt"
+				},
+				"query": "index=_internal \n| timechart count by sourcetype"
+			},
+			"name": "RealTimeSearch"
+		},
+		"ds_KXiOnk0i": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-15m",
+					"latest": "now"
+				},
+				"query": "index=_internal \n| stats count by sourcetype",
+				"refresh": "5m"
+			},
+			"name": "Search1"
+		},
+		"ds_EtYzZX5k_ds_KXiOnk0i": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "-15m",
+					"latest": "now"
+				},
+				"query": "index=_internal \n| stats count by sourcetype",
+				"refresh": "5m"
+			},
+			"name": "Search2"
+		}
+	},
+	"inputs": {},
+	"layout": {
+		"globalInputs": [],
+		"type": "absolute",
+		"options": {
+			"height": 800
+		},
+		"structure": [
+			{
+				"item": "viz_06CD4HtG",
+				"type": "line",
+				"position": {
+					"from": {
+						"x": 16,
+						"y": 503
+					},
+					"to": {
+						"x": 1199,
+						"y": 503
+					}
+				}
+			},
+			{
+				"item": "viz_XeNsQKs5",
+				"type": "block",
+				"position": {
+					"x": 10,
+					"y": 510,
+					"w": 1190,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_2m0gp1CP",
+				"type": "block",
+				"position": {
+					"x": 10,
+					"y": 0,
+					"w": 1190,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_1FWG4GA3",
+				"type": "block",
+				"position": {
+					"x": 340,
+					"y": 0,
+					"w": 430,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_JCzRTwGn",
+				"type": "block",
+				"position": {
+					"x": 10,
+					"y": 60,
+					"w": 390,
+					"h": 230
+				}
+			},
+			{
+				"item": "viz_Qh6Hvsu6",
+				"type": "block",
+				"position": {
+					"x": 410,
+					"y": 60,
+					"w": 390,
+					"h": 230
+				}
+			},
+			{
+				"item": "viz_brlKgRbq",
+				"type": "block",
+				"position": {
+					"x": 810,
+					"y": 60,
+					"w": 390,
+					"h": 230
+				}
+			},
+			{
+				"item": "viz_1Pmogm23",
+				"type": "block",
+				"position": {
+					"x": 10,
+					"y": 310,
+					"w": 1190,
+					"h": 180
+				}
+			},
+			{
+				"item": "viz_7QV1huRH",
+				"type": "block",
+				"position": {
+					"x": 30,
+					"y": 310,
+					"w": 1160,
+					"h": 120
+				}
+			},
+			{
+				"item": "viz_lqdEDa1X",
+				"type": "block",
+				"position": {
+					"x": 390,
+					"y": 510,
+					"w": 430,
+					"h": 50
+				}
+			},
+			{
+				"item": "viz_pDMSdLb4",
+				"type": "block",
+				"position": {
+					"x": 10,
+					"y": 570,
+					"w": 1190,
+					"h": 140
+				}
+			},
+			{
+				"item": "viz_8i9zjVyM",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 580,
+					"w": 1100,
+					"h": 110
+				}
+			}
+		]
+	},
+	"defaults": {
+		"visualizations": {
+			"global": {
+				"showLastUpdated": false,
+				"showProgressBar": true
+			},
+			"viz.column": {
+				"showLastUpdated": true,
+				"showProgressBar": false
+			},
+			"viz.area": {
+				"showLastUpdated": true
+			}
+		}
+	},
+	"description": "Show Last Update Time; Export Dashboard to PNG or PDF",
+	"title": "Dashboards Beta v0.7 Highlights"
+}
